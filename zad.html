@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restauracja Wszystkie Smaki</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #F8E5DC;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            margin-top: 30px;
+        }
+        header h1 {
+            color: #A52A2A;
+        }
+        .panel {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #FFF;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .panel img {
+            max-width: 200%;
+            display: block;
+            margin: 0 auto;
+        }
+        .panel h2 {
+            text-align: center;
+            color: #A52A2A;
+        }
+        .panel p {
+            text-align: center;
+        }
+        .reservation {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .reservation form {
+            display: inline-block;
+            text-align: left;
+        }
+        .reservation label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .reservation input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .reservation button {
+            background-color: #A52A2A;
+            color: #FFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .reservation button:hover {
+            background-color: #D2691E;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            background-color: #D2691E;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Witamy w restauracji "Wszystkie Smaki"</h1>
+    </header>
+    <div class="panel">
+        <h2>U nas dobrze zjesz!</h2>
+        <p>Obiady od 40 zł<br>Przekąski od 10 zł<br>Kolacje od 20 zł</p>
+        <img src="menu.jpg" alt="Przykładowe zdjęcie potrawy">
+    </div>
+    <div class="reservation">
+        <h2>Zarezerwuj stolik on-line</h2>
+        <form method="POST" action="rezerwacja.php">
+            <label for="name">Twoje imię:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Data (format: rr-mm-dd):</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="phone">Twój numer telefonu:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label>
+                <input type="checkbox" name="accept" required>
+                Wyrażam zgodę na przetwarzanie moich danych osobowych
+            </label>
+
+            <button type="submit">ZAREZERWUJ</button>
+        </form>
+    </div>
+    <footer>
+        <p>Strona internetowa przeznaczona do celów edukacyjnych</p>
+    </footer>
+</body>
+</html>
